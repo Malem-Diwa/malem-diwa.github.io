@@ -10,10 +10,9 @@ function update() {
     var jam = padZero(date.getHours());
     var menit = padZero(date.getMinutes());
     var detik = padZero(date.getSeconds());
-    var milidetik = padZero(date.getMilliseconds());
     var zona_waktu = Intl.DateTimeFormat().resolvedOptions().timeZone;
     let datetime = window.document.getElementById("waktu")
-    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + "." + milidetik + " " + "(" + zona_waktu + ")" + "]";
+    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + ")" + "]";
 }
 
 setInterval(update, 75)
