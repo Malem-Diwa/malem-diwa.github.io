@@ -15,4 +15,4 @@ function update() {
     datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + ")" + "]";
 }
 
-setInterval(update, 75)
+setInterval(update, 1000)
