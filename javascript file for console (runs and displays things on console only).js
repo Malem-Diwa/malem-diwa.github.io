@@ -2,6 +2,12 @@
 // File JavaScript ini direferensi setiap file HTML (kecuali file html setiap WebGame yang terhost disini.)
 // dan akan langsung jalan di setiap <HEAD>.
 // Setiap output hanya akan terdisplay di Console.
+function padzero_HelperFunction(padzero_number) {
+    return padzero_number.toString().padStart(2, '0');
+}
+function padzero_millis_HelperFunction(padzero_millis) {
+    return padzero_millis.toString().padStart(3, '0')
+}
 
 // Variabel.
 // Variabel navigator.
@@ -19,29 +25,31 @@ const screen_AVAILHEIGHT = window.screen.availHeight; // Total height available 
 const screen_COLORDEPTH = window.screen.colorDepth; // Number of bits used to display colors.
 const screen_WIDTH = window.screen.width; // Total width of screen in CSS pixels.
 const screen_HEIGHT = window.screen.height; // Total height of screen in CSS pixels.
+// Misc.
+var date_var = new Date();
 
 // Output Console.
 // window.navigator.
 window.console.log("---start window.navigator---");
-window.console.log("window.navigator.userAgent: [" + navigator_USERAGENT + "];");
-window.console.log("window.navigator.platform: [" + navigator_PLATFORM + "];");
-window.console.log("window.navigator.language: [" + navigator_LANGUAGE + "];");
-window.console.log("window.navigator.languages: [" + navigator_LANGUAGES + "];");
-window.console.log("window.navigator.hardwareConcurrency: [" + navigator_HARDWARECONCURRENCY + "];");
-window.console.log("window.navigator.maxTouchPoints: [" + navigator_MAXTOUCHPOINTS + "];");
+window.console.log("window.navigator.userAgent: [" + navigator_USERAGENT + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.navigator.platform: [" + navigator_PLATFORM + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.navigator.language: [" + navigator_LANGUAGE + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.navigator.languages: [" + navigator_LANGUAGES + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.navigator.hardwareConcurrency: [" + navigator_HARDWARECONCURRENCY + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.navigator.maxTouchPoints: [" + navigator_MAXTOUCHPOINTS + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 if (navigator_RAM == null) {
-    window.console.log("window.navigator.deviceMemory: [" + "null" + "];");
+    window.console.log("window.navigator.deviceMemory: [" + "null" + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 }
 else {
-    window.console.log("window.navigator.deviceMemory: [" + navigator_RAM + "];");
+    window.console.log("window.navigator.deviceMemory: [" + navigator_RAM + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 }
 window.console.log("---end window.navigator---");
 // window.screen.
 window.console.log("---start window.screen---");
-window.console.log("window.screen.height: [" + screen_WIDTH + "];");
-window.console.log("window.screen.width: [" + screen_HEIGHT + "];");
-window.console.log("window.screen.availWidth: [" + screen_AVAILWIDTH + "];");
-window.console.log("window.screen.availHeight: [" + screen_AVAILHEIGHT + "];");
-window.console.log("window.screen.colorDepth: [" + screen_COLORDEPTH + "];");
-window.console.log("window.screen.pixelDepth: [" + screen_PIXELDEPTH + "];");
+window.console.log("window.screen.height: [" + screen_WIDTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.screen.width: [" + screen_HEIGHT + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.screen.availWidth: [" + screen_AVAILWIDTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.screen.availHeight: [" + screen_AVAILHEIGHT + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.screen.colorDepth: [" + screen_COLORDEPTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.screen.pixelDepth: [" + screen_PIXELDEPTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("---end window.screen---");
