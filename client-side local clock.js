@@ -14,4 +14,4 @@ function update() {
     let datetime = window.document.getElementById("waktu");
     datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + ")" + "]";
 }
-setInterval(update, 769);
+setInterval(update, 500);
