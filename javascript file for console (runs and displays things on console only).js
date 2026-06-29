@@ -26,7 +26,7 @@ window.console.log("---start window.navigator---");
 window.console.log("window.navigator.userAgent: [" + navigator_USERAGENT + "];");
 window.console.log("window.navigator.platform: [" + navigator_PLATFORM + "];");
 window.console.log("window.navigator.language: [" + navigator_LANGUAGE + "];");
-window.console.log("window.navigator.languages: [" + navigator_LANGUAGES + "]");
+window.console.log("window.navigator.languages: [" + navigator_LANGUAGES + "];");
 window.console.log("window.navigator.hardwareConcurrency: [" + navigator_HARDWARECONCURRENCY + "];");
 window.console.log("window.navigator.maxTouchPoints: [" + navigator_MAXTOUCHPOINTS + "];");
 if (navigator_RAM == null) {
