@@ -27,7 +27,9 @@ const screen_AVAILHEIGHT = window.screen.availHeight; // Total height available 
 const screen_COLORDEPTH = window.screen.colorDepth; // Number of bits used to display colors.
 const screen_WIDTH = window.screen.width; // Total width of screen in CSS pixels.
 const screen_HEIGHT = window.screen.height; // Total height of screen in CSS pixels.
-const screen_ORIENTATION = window.screen.orientation; // Orientation of display.
+// Variabel orientation.
+const orientation_TYPE = window.screen.orientation.type;
+const orientation_ANGLE = window.screen.orientation.angle;
 // Variabel location.
 const location_HASH = window.location.hash;
 const location_HREF = window.location.href;
@@ -68,8 +70,13 @@ window.console.log("window.screen.availWidth: [" + screen_AVAILWIDTH + "];" + " 
 window.console.log("window.screen.availHeight: [" + screen_AVAILHEIGHT + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("window.screen.colorDepth: [" + screen_COLORDEPTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("window.screen.pixelDepth: [" + screen_PIXELDEPTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
-window.console.log("window.screen.orientation: [" + screen_ORIENTATION + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("---end window.screen---");
+// window.screen.orientation.
+window.console.log("---start window.screen.orientation---");
+window.console.log("window.screen.orientation.type: [" + orientation_TYPE + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.screen.orientation.angle: [" + orientation_ANGLE + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("---end window.screen.orientation---");
+
 // window.location.
 window.console.log("---start window.location---");
 window.console.log("window.location.hash: [" + location_HASH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
