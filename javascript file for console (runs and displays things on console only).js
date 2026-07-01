@@ -95,7 +95,7 @@ window.console.log("---start webgl---");
 const kanvas = window.document.createElement("canvas");
 const WebGL_konteks = kanvas.getContext("webgl2") || kanvas.getContext("webgl") || kanvas.getContext("experimental-webgl");
 
-if (WebGL != null) {
+if (WebGL_konteks != null) {
     const informasi_debug = WebGL_konteks.getExtension("WEBGL_debug_renderer_info");
     if (informasi_debug) {
         const vendor = WebGL_konteks.getParameter(informasi_debug.UNMASKED_VENDOR_WEBGL);
