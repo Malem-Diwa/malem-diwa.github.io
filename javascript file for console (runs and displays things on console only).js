@@ -1,12 +1,12 @@
 // Malem Diwa
 // File JavaScript ini direferensi setiap file HTML (kecuali file html setiap WebGame yang terhost disini.)
-// dan akan langsung jalan di setiap <HEAD>.
+// dan akan langsung jalan di <BODY> sebelum Markup code apapun (Paling atas).
 // Setiap output hanya akan terdisplay di Console.
 function padzero_HelperFunction(padzero_number) {
     return padzero_number.toString().padStart(2, '0');
 }
 function padzero_millis_HelperFunction(padzero_millis) {
-    return padzero_millis.toString().padStart(3, '0')
+    return padzero_millis.toString().padStart(3, '0');
 }
 
 // Variabel.
@@ -25,6 +25,17 @@ const screen_AVAILHEIGHT = window.screen.availHeight; // Total height available 
 const screen_COLORDEPTH = window.screen.colorDepth; // Number of bits used to display colors.
 const screen_WIDTH = window.screen.width; // Total width of screen in CSS pixels.
 const screen_HEIGHT = window.screen.height; // Total height of screen in CSS pixels.
+// Variabel location.
+const location_HASH = window.location.hash;
+const location_HREF = window.location.href;
+const location_HOSTNAME = window.location.hostname;
+const location_HOST = window.location.host;
+const location_ORIGIN = window.location.origin;
+const location_PATHNAME = window.location.pathname;
+const location_PORT = window.location.port;
+const location_PROTOCOL = window.location.protocol;
+const location_SEARCH = window.location.search;
+
 // Misc.
 var date_var = new Date();
 
@@ -53,3 +64,15 @@ window.console.log("window.screen.availHeight: [" + screen_AVAILHEIGHT + "];" + 
 window.console.log("window.screen.colorDepth: [" + screen_COLORDEPTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("window.screen.pixelDepth: [" + screen_PIXELDEPTH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("---end window.screen---");
+// window.location.
+window.console.log("---start window.location---");
+window.console.log("window.location.hash: [" + location_HASH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.href: [" + location_HREF + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.origin: [" + location_ORIGIN + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.hostname: [" + location_HOSTNAME + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.host: [" + location_HOST + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.pathname: [" + location_PATHNAME + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.port: [" + location_PORT + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.protocol: [" + location_PROTOCOL + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("window.location.search: [" + location_SEARCH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+window.console.log("---end window.location---");
