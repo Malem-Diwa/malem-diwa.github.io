@@ -89,3 +89,30 @@ window.console.log("window.location.port: [" + location_PORT + "];" + " " + "[" 
 window.console.log("window.location.protocol: [" + location_PROTOCOL + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("window.location.search: [" + location_SEARCH + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
 window.console.log("---end window.location---");
+
+// Ekstra (WebGL)
+window.console.log("---start webgl---");
+const kanvas = window.document.createElement("canvas");
+const WebGL_konteks = kanvas.getContext("webgl2") || kanvas.getContext("webgl") || kanvas.getContext("experimental-webgl");
+
+if (WebGL != null) {
+    const informasi_debug = WebGL_konteks.getExtension("WEBGL_debug_renderer_info");
+    if (informasi_debug) {
+        const vendor = WebGL_konteks.getParameter(informasi_debug.UNMASKED_VENDOR_WEBGL);
+        const renderer = WebGL_konteks.getParameter(informasi_debug.UNMASKED_RENDERER_WEBGL);
+        if (vendor != null && renderer != null) {
+            window.console.log("WebGL_debug_renderer_info Vendor Parameter: [" + vendor + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+            window.console.log("WebGL_debug_renderer_info Renderer Parameter: [" + renderer + "];" + " " + "[" + date_var.getFullYear() + "-" + padzero_HelperFunction(date_var.getMonth()) + "-" + padzero_HelperFunction(date_var.getDate()) + " " + padzero_HelperFunction(date_var.getHours()) + ":" + padzero_HelperFunction(date_var.getMinutes()) + ":" + padzero_HelperFunction(date_var.getSeconds()) + "." + padzero_millis_HelperFunction(date_var.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];");
+        }
+        else {
+            window.console.log("vendor/renderer is null.");
+        }
+    }
+    else {
+        window.console.log("WEBGL_debug_renderer_info tidak didukung di Browser Anda.");
+    }
+}
+else {
+    window.console.log("Konteks webgl (webgl2, webgl, experimental-webgl) tidak didukung di Browser Anda.");
+}
+window.console.log("---end webgl---");
