@@ -45,11 +45,11 @@ function BuildTimestamp() {
     const date = new Date();
     // About the getMonth without "+ 1": Don't ask why I did not add by one, i don't care. Just remember that getMonth returns a zero-based value and mentally translate it yourself.
     return " " + "[" + date.getFullYear() + "-" + padzero_HelperFunction(date.getMonth()) + "-" + padzero_HelperFunction(date.getDate()) + " " + padzero_HelperFunction(date.getHours()) + ":" + padzero_HelperFunction(date.getMinutes()) + ":" + padzero_HelperFunction(date.getSeconds()) + "." + padzero_millis_HelperFunction(date.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];";
-}
+} // Constructs a new Date(); object and then returns A timestamp. Precise to the millisecond (and timezone).
 
 // Output Console.
 // window.navigator.
-window.console.log("---start window.navigator---");
+window.console.log("---start window.navigator---" + BuildTimestamp());
 window.console.log("window.navigator.userAgent: [" + navigator_USERAGENT + "];" + BuildTimestamp());
 window.console.log("window.navigator.platform: [" + navigator_PLATFORM + "];" + BuildTimestamp());
 window.console.log("window.navigator.language: [" + navigator_LANGUAGE + "];" + BuildTimestamp());
@@ -63,25 +63,30 @@ if (navigator_RAM == null) {
 else {
     window.console.log("window.navigator.deviceMemory: [" + navigator_RAM + "];" + BuildTimestamp());
 }
-window.console.log("window.navigator.doNotTrack: [" + navigator_DONOTTRACK + "];" + BuildTimestamp());
-window.console.log("---end window.navigator---");
+if (navigator_DONOTTRACK != null) {
+    window.console.log("window.navigator.doNotTrack: [" + navigator_DONOTTRACK + "];" + BuildTimestamp());
+}
+else {
+    window.console.log("window.navigator.doNotTrack: [" + "null" + "];" + BuildTimestamp());
+}
+window.console.log("---end window.navigator---" + BuildTimestamp());
 // window.screen.
-window.console.log("---start window.screen---");
+window.console.log("---start window.screen---" + BuildTimestamp());
 window.console.log("window.screen.height: [" + screen_HEIGHT + "];" + BuildTimestamp());
 window.console.log("window.screen.width: [" + screen_WIDTH + "];" + BuildTimestamp());
 window.console.log("window.screen.availWidth: [" + screen_AVAILWIDTH + "];" + BuildTimestamp());
 window.console.log("window.screen.availHeight: [" + screen_AVAILHEIGHT + "];" + BuildTimestamp());
 window.console.log("window.screen.colorDepth: [" + screen_COLORDEPTH + "];" + BuildTimestamp());
 window.console.log("window.screen.pixelDepth: [" + screen_PIXELDEPTH + "];" + BuildTimestamp());
-window.console.log("---end window.screen---");
+window.console.log("---end window.screen---" + BuildTimestamp());
 // window.screen.orientation.
-window.console.log("---start window.screen.orientation---");
+window.console.log("---start window.screen.orientation---" + BuildTimestamp());
 window.console.log("window.screen.orientation.type: [" + orientation_TYPE + "];" + BuildTimestamp());
 window.console.log("window.screen.orientation.angle: [" + orientation_ANGLE + "];" + BuildTimestamp());
-window.console.log("---end window.screen.orientation---");
+window.console.log("---end window.screen.orientation---" + BuildTimestamp());
 
 // window.location.
-window.console.log("---start window.location---");
+window.console.log("---start window.location---" + BuildTimestamp());
 window.console.log("window.location.hash: [" + location_HASH + "];" + BuildTimestamp());
 window.console.log("window.location.href: [" + location_HREF + "];" + BuildTimestamp());
 window.console.log("window.location.origin: [" + location_ORIGIN + "];" + BuildTimestamp());
@@ -91,10 +96,11 @@ window.console.log("window.location.pathname: [" + location_PATHNAME + "];" + Bu
 window.console.log("window.location.port: [" + location_PORT + "];" + BuildTimestamp());
 window.console.log("window.location.protocol: [" + location_PROTOCOL + "];" + BuildTimestamp());
 window.console.log("window.location.search: [" + location_SEARCH + "];" + BuildTimestamp());
-window.console.log("---end window.location---");
+window.console.log("---end window.location---" + BuildTimestamp());
 
 // Ekstra (WebGL)
-window.console.log("---start webgl---");
+// Now we go deeper!
+window.console.log("---start webgl---" + BuildTimestamp());
 const kanvas = window.document.createElement("canvas");
 const WebGL_konteks = kanvas.getContext("webgl2") || kanvas.getContext("webgl") || kanvas.getContext("experimental-webgl");
 
@@ -118,4 +124,4 @@ if (WebGL_konteks != null) {
 else {
     window.console.log("Konteks webgl (webgl2, webgl, experimental-webgl) tidak didukung di Browser Anda." + BuildTimestamp());
 }
-window.console.log("---end webgl---");
+window.console.log("---end webgl---" + BuildTimestamp());
