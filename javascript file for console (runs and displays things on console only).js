@@ -40,6 +40,14 @@ const location_PATHNAME = window.location.pathname;
 const location_PORT = window.location.port;
 const location_PROTOCOL = window.location.protocol;
 const location_SEARCH = window.location.search;
+// Variabel window.
+const window_INNERWIDTH = window.innerWidth;
+const window_INNERHEIGHT = window.innerHeight;
+const window_OUTERWIDTH = window.outerWidth;
+const window_OUTERHEIGHT = window.outerHeight;
+// Variabel window.document.documentElement
+const documentelement_CLIENTWIDTH = window.document.documentElement.clientWidth;
+const documentelement_CLIENTHEIGHT = window.document.documentElement.clientHeight;
 
 function BuildTimestamp() {
     const date = new Date();
@@ -97,6 +105,20 @@ window.console.log("window.location.port: [" + location_PORT + "];" + BuildTimes
 window.console.log("window.location.protocol: [" + location_PROTOCOL + "];" + BuildTimestamp());
 window.console.log("window.location.search: [" + location_SEARCH + "];" + BuildTimestamp());
 window.console.log("---end window.location---" + BuildTimestamp());
+
+// window.
+window.console.log("---start window---" + BuildTimestamp());
+window.console.log("window.innerWidth: [" + window_INNERWIDTH + "];" + BuildTimestamp());
+window.console.log("window.innerHeight: [" + window_INNERHEIGHT + "];" + BuildTimestamp());
+window.console.log("window.outerHeight: [" + window_OUTERHEIGHT + "];" + BuildTimestamp());
+window.console.log("window.outerWidth: [" + window_OUTERWIDTH + "];" + BuildTimestamp());
+window.console.log("---end window---" + BuildTimestamp());
+
+// window.document.documentElement.
+window.console.log("---start window.document.documentElement---" + BuildTimestamp());
+window.console.log("window.document.documentElement.clientHeight: [" + documentelement_CLIENTHEIGHT + "];" + BuildTimestamp());
+window.console.log("window.document.documentElement.clientWidth: [" + documentelement_CLIENTWIDTH + "];" + BuildTimestamp());
+window.console.log("---end window.document.documentElement---" + BuildTimestamp());
 
 // Ekstra (WebGL)
 // Now we go deeper!
