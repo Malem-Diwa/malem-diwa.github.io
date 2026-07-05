@@ -51,9 +51,10 @@ const documentelement_CLIENTHEIGHT = window.document.documentElement.clientHeigh
 
 function BuildTimestamp() {
     const date = new Date();
-    // About the getMonth without "+ 1": Don't ask why I did not add by one, i don't care. Just remember that getMonth returns a zero-based value and mentally translate it yourself.
-    return " " + "[" + date.getFullYear() + "-" + padzero_HelperFunction(date.getMonth()) + "-" + padzero_HelperFunction(date.getDate()) + " " + padzero_HelperFunction(date.getHours()) + ":" + padzero_HelperFunction(date.getMinutes()) + ":" + padzero_HelperFunction(date.getSeconds()) + "." + padzero_millis_HelperFunction(date.getMilliseconds()) + " (" + Intl.DateTimeFormat().resolvedOptions().timeZone + ")" + "];";
-} // Constructs a new Date(); object and then returns A timestamp. Precise to the millisecond (and timezone).
+    // About the getMonth without "+ 1": Don't ask why I did not add by one, i don't care.
+    // Just remember that getMonth returns a zero-based value, and then, mentally translate it yourself.
+    return " " + "[" + "FullYear={" + date.getFullYear() + "}" + "-" + "MonthNumber={" + padzero_HelperFunction(date.getMonth()) + "}" + "-" + "DayOfMonth={" + padzero_HelperFunction(date.getDate()) + "}" + "-" + "DayOfWeek={" + date.getDay() + "}" + " " + "Hours={" + padzero_HelperFunction(date.getHours()) + "}" + ":" + "Minutes={" + padzero_HelperFunction(date.getMinutes()) + "}" + ":" + "Seconds={" + padzero_HelperFunction(date.getSeconds()) + "}" + "." + "Milliseconds={" + padzero_millis_HelperFunction(date.getMilliseconds()) + "}" + " (" + "timeZone={" + Intl.DateTimeFormat().resolvedOptions().timeZone + "}" + ", " + "TimezoneOffset={" + date.getTimezoneOffset() + "}" + ")" + "];";
+} // Constructs a new Date(); object and then returns A timestamp. Precise to the millisecond (and timezone and etc).
 
 // Output Console.
 // window.navigator.
@@ -147,3 +148,14 @@ else {
     window.console.log("Konteks webgl (webgl2, webgl, experimental-webgl) tidak didukung di Browser Anda." + BuildTimestamp());
 }
 window.console.log("---end webgl---" + BuildTimestamp());
+
+
+
+
+
+
+
+
+// Dan ekstra note....
+// "SAYA AKAN LAWAN."
+// Coba tebak, siapa yang katakan itu. Pembaca?
