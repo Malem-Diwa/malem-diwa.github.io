@@ -53,8 +53,51 @@ function BuildTimestamp() {
     const date = new Date();
     // About the getMonth without "+ 1": Don't ask why I did not add by one, i don't care.
     // Just remember that getMonth returns a zero-based value, and then, mentally translate it yourself.
-    return " " + "[" + "FullYear={" + date.getFullYear() + "}" + "-" + "MonthNumber={" + padzero_HelperFunction(date.getMonth()) + "}" + "-" + "DayOfMonth={" + padzero_HelperFunction(date.getDate()) + "}" + "-" + "DayOfWeek={" + date.getDay() + "}" + " " + "Hours={" + padzero_HelperFunction(date.getHours()) + "}" + ":" + "Minutes={" + padzero_HelperFunction(date.getMinutes()) + "}" + ":" + "Seconds={" + padzero_HelperFunction(date.getSeconds()) + "}" + "." + "Milliseconds={" + padzero_millis_HelperFunction(date.getMilliseconds()) + "}" + " (" + "timeZone={" + Intl.DateTimeFormat().resolvedOptions().timeZone + "}" + ", " + "TimezoneOffset={" + date.getTimezoneOffset() + "}" + ")" + "];";
+    return " " + "[" + "FullYear={" + date.getFullYear() + "}" + "-" + "MonthNumber={" + padzero_HelperFunction(date.getMonth()) + "}" + "-" + "MonthNamed_short={" + date.toLocaleString('id', {month: 'short'}) + "}" + "-" + "MonthNamed_long={" + date.toLocaleString('id', {month: 'long'}) + "}" + "-" + "DayOfMonth={" + padzero_HelperFunction(date.getDate()) + "}" + "-" + "DayOfWeek_number={" + date.getDay() + "}" + "-" + "DayOfWeek_short={" + date.toLocaleString('id', {weekday: 'short'}) + "}" + "-" + "DayOfWeek_long={" + date.toLocaleString('id', {weekday: 'long'}) + "}" + " " + "Hours={" + padzero_HelperFunction(date.getHours()) + "}" + ":" + "Minutes={" + padzero_HelperFunction(date.getMinutes()) + "}" + ":" + "Seconds={" + padzero_HelperFunction(date.getSeconds()) + "}" + "." + "Milliseconds={" + padzero_millis_HelperFunction(date.getMilliseconds()) + "}" + " (" + "timeZone={" + Intl.DateTimeFormat().resolvedOptions().timeZone + "}" + ", " + "TimezoneOffset={" + date.getTimezoneOffset() + "}" + ")" + "];";
 } // Constructs a new Date(); object and then returns A timestamp. Precise to the millisecond (and timezone and etc).
+
+// From Copilot
+/*
+const date = new Date();
+
+console.log(date.toLocaleString('id', { month: 'short', weekday: 'short' }));
+// "Sen, Jul"
+
+console.log(date.toLocaleString('id', { month: 'long', weekday: 'long' }));
+// "Senin, Juli"
+*/
+
+/* 
+Good catch — yes, the Date object in JavaScript can give you named months and days of the week, though not directly through the basic getter methods.
+
+Here’s how it works:
+
+🧩 What Date() Gives You
+getMonth() → returns a number (0–11).
+You have to map it yourself to names like "January", "February", etc.
+
+getDay() → returns a number (0–6).
+You can map it to "Sunday", "Monday", etc.
+
+🧠 How to Get Names Automatically
+You can use toLocaleString() or Intl.DateTimeFormat() to get readable names:
+
+js
+const date = new Date();
+const monthName = date.toLocaleString('en-US', { month: 'long' });
+const dayName = date.toLocaleString('en-US', { weekday: 'long' });
+
+console.log(monthName); // e.g. "July"
+console.log(dayName);   // e.g. "Monday"
+Or with Intl.DateTimeFormat:
+
+js
+const formatter = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long' });
+console.log(formatter.format(new Date())); // "Monday, July"
+So yes — the Date object can give you named months and days, but you have to ask politely through localization functions rather than the raw getters.
+
+It’s funny how the author of your script went the opposite way: they used numeric getters and told readers to “mentally translate it yourself.” You could say they refused the easy dopamine of toLocaleString()!
+*/
 
 // Output Console.
 // window.navigator.
