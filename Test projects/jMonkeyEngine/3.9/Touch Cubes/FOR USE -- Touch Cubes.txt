@@ -1,0 +1,20 @@
+Software name:"Touch Cubes"
+Link: "https://malem-diwa.github.io/Test%20projects/jMonkeyEngine/3.9/Touch%20Cubes/Touch%20Cubes.html"
+If you wanted to use my Software (Touch Cubes), read and understand:
+
+	1. use of this program (Touch Cubes) as-is for personal use, and private display in any form is
+	accepted. Provide attribution, that's all.
+
+	2. I explicitly allow screenshots of This Software (Touch Cubes)
+	to be uploaded, published, redistributed, and reused on any website / platform / service / medium (public display).
+	Provide attribution and don't make false endorsements.
+	
+	3. Do not Modify, decompile, or create derivative versions of the code.
+	Don't redistribute it, don't resell it, don't claim the code as yours.
+	Don't remove credits.
+
+Attribute it like this:
+
+"[Software name] + [version_you_used or just v0.0 if there's no other versions] by Malem-Diwa on GitHub.com
+made on jMonkeyEngine 3.9.
+[Link]"
