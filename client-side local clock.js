@@ -18,6 +18,7 @@ function update() {
     let MM_offset = String(Math.abs(offset_waktu_JS)%60).padStart(2, '0');
     // Datetime.
     let datetime = window.document.getElementById("waktu");
-    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, ${sign}${HH_offset}:${MM_offset}` + `, ${-offset_waktu_JS}` + ")" + "]";
+    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, UTC${sign}${HH_offset}:${MM_offset}` + `, JS-OFFSET_${-offset_waktu_JS}` + ")" + "]";
 }
+update();
 setInterval(update, 1000);
