@@ -1,3 +1,7 @@
+// Author: Malem Diwa
+// PATH: /javascript%20file%20for%20console%20%28runs%20and%20displays%20things%20on%20console%20only%29.js
+// Written: 2026-11-04 (By written MEANS: When was this page updated, even new comments still count)
+
 // Malem Diwa
 // File JavaScript ini direferensi setiap file HTML (kecuali file html setiap WebGame yang terhost disini.)
 // dan akan langsung jalan di <BODY> sebelum Markup code apapun (Paling atas).

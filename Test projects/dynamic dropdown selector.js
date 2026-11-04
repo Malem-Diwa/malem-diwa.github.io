@@ -1,3 +1,7 @@
+// Author: Malem Diwa
+// PATH: /Test%20projects/dynamic%20dropdown%20selector.js
+// Written: 2026-11-04
+
 const select = window.document.getElementById("download-options");
 const download_link = window.document.getElementById("download-selected");
 download_link.href = select.value;
