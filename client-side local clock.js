@@ -1,6 +1,6 @@
 // Author: Malem Diwa
 // PATH: /client-side%20local%20clock.js
-// Written: 2026-11-04
+// Written: 2026-11-11
 function padZero(padzero_number) {
     return padzero_number.toString().padStart(2, '0');
 }
@@ -17,11 +17,13 @@ function update() {
     // Offset UTC.
     var offset_waktu_JS = -date.getTimezoneOffset();
     let sign = offset_waktu_JS >= 0 ? '+' : '-';
-    let HH_offset = String(	Math.floor(Math.abs(offset_waktu_JS)/60)).padStart(2, '0');
+    let HH_offset = String(Math.floor(Math.abs(offset_waktu_JS)/60)).padStart(2, '0');
     let MM_offset = String(Math.abs(offset_waktu_JS)%60).padStart(2, '0');
+    // UTC why not.
+    var UTC_Z_noMS_blahblahlblah = date.toISOString().strip('.')[0] + 'Z';
     // Datetime.
     let datetime = window.document.getElementById("waktu");
-    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, UTC${sign}${HH_offset}:${MM_offset}` + `, JS-OFFSET_${-offset_waktu_JS}` + ")" + "]";
+    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, UTC${sign}${HH_offset}:${MM_offset}` + `, JS-OFFSET_${-offset_waktu_JS}` + ")" + "]\n" + "(UTC_Z) Clock:" + UTC_Z_noMS_blahblahlblah;
 }
 update();
 setInterval(update, 1000);
