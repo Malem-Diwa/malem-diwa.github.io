@@ -23,7 +23,7 @@ function update() {
     var UTC_Z_noMS_blahblahlblah = date.toISOString().split('.')[0] + 'Z';
     // Datetime.
     let datetime = window.document.getElementById("waktu");
-    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, UTC${sign}${HH_offset}:${MM_offset}` + `, JS-OFFSET_${-offset_waktu_JS}` + ")" + "]\n" + "(UTC_Z) Clock:" + UTC_Z_noMS_blahblahlblah;
+    datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, UTC${sign}${HH_offset}:${MM_offset}` + `, JS-OFFSET_${-offset_waktu_JS}` + ")" + "]\n" + "(UTC_Z) Clock Time: " + UTC_Z_noMS_blahblahlblah;
 }
 update();
 setInterval(update, 1000);
