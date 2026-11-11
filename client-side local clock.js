@@ -20,7 +20,7 @@ function update() {
     let HH_offset = String(Math.floor(Math.abs(offset_waktu_JS)/60)).padStart(2, '0');
     let MM_offset = String(Math.abs(offset_waktu_JS)%60).padStart(2, '0');
     // UTC why not.
-    var UTC_Z_noMS_blahblahlblah = date.toISOString().strip('.')[0] + 'Z';
+    var UTC_Z_noMS_blahblahlblah = date.toISOString().split('.')[0] + 'Z';
     // Datetime.
     let datetime = window.document.getElementById("waktu");
     datetime.innerText = "Client-Side Local Clock Time: [" + tahun + "-" + bulan + "-" + hari + " " + jam + "." + menit + "." + detik + " " + "(" + zona_waktu + `, UTC${sign}${HH_offset}:${MM_offset}` + `, JS-OFFSET_${-offset_waktu_JS}` + ")" + "]\n" + "(UTC_Z) Clock:" + UTC_Z_noMS_blahblahlblah;
